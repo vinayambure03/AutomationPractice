@@ -27,7 +27,7 @@ public class Test_CreateAccount extends BaseClass{
 //	String signOptionText = "Sign up for our newsletter!";
 //	String offerLetterText = "Receive special offers from our partners!";
 	
-	
+	//Testing
 	@Test(dataProvider = "getData")
 	public void createMyAcc(HashMap<String, String> input) throws Exception {
 	
