@@ -1,0 +1,24 @@
+[
+{ 
+
+	"userName" : "V017",
+	"userEmailId":"V017@gmail.com",
+	"password":"V@123",
+	"signOptionText":"Sign up for our newsletter!",
+	"offerLetterText":"Receive special offers from our partners!",
+	"day":"11",
+	"month":"6",
+	"data":"2021",
+	"firstName":"Kumar",
+	"lastName":"Kumari",
+	"companyName":"I Am Company",
+	"addName1":"H/N 189, Kumar nilay",
+	"addName2":"vijayanagr",
+	"data1":"Israel",
+	"stateName":"Karnakata",
+	"cityName":"Bangalore",
+	"zipCode":"5660012",
+	"mobileNo":"7894561230"
+	
+}
+]
