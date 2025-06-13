@@ -23,6 +23,7 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import PageObjectModel.CreateAccount;
+import PageObjectModel.LogInPage;
 import UtilityClass.ExtentReportClass;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -33,7 +34,7 @@ public class BaseClass {
 	ExtentTest test;
 	ExtentReports extent;
 	ExtentReportClass  erc;
-	
+	LogInPage logInPage;
 	public WebDriver initializerDriver() throws Exception
 	{
 		Properties prop = new Properties();
@@ -43,12 +44,13 @@ public class BaseClass {
 		
 		if(browserName.equalsIgnoreCase("chrome"))
 		{
-			 erc= new ExtentReportClass();
-			 erc.extentReportConfig();
-			 extent = erc.extent; // <-- Fix: Assign erc.extent to local extent
-			 test =extent.createTest("Login Test");
+//			 erc= new ExtentReportClass();
+//			 erc.extentReportConfig();
+//			 extent = erc.extent; // <-- Fix: Assign erc.extent to local extent
+//			 test =extent.createTest("Login Test");
 			WebDriverManager.chromedriver().setup(); 
 			driver = new ChromeDriver();
+		
 		}else {
 			
 			WebDriverManager.edgedriver().setup();
@@ -80,14 +82,17 @@ public class BaseClass {
 		return createAcc;
 	}
 	
-	@AfterTest
+	
+	
+
 	public void tearDown() throws Exception
 	{
 		if (driver != null) {
 	        driver.close();
+	        Thread.sleep(2000);
 	    }
-	    if (extent != null) {
-	        extent.flush();
-	    }
+//	    if (extent != null) {"V017@gmail.com"
+//	        extent.flush();
+//	    }
 	}
 }

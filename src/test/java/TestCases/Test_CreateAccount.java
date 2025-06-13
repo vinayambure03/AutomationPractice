@@ -17,7 +17,6 @@ import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
 import PageObjectModel.CreateAccount;
-import UtilityClass.ExtentReportClass;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Test_CreateAccount extends BaseClass{
@@ -63,6 +62,11 @@ public class Test_CreateAccount extends BaseClass{
 		return new Object[][] {{data.get(0)}};
 	}
 
+	 
+	public void userLogIn()
+	{
+		
+	}
 	
 	
 }

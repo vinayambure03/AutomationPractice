@@ -13,7 +13,7 @@ import AbstractMethods.AbstractClass;
 public class CreateAccount extends AbstractClass {
 
 	WebDriver driver;
-
+	
 	public CreateAccount(WebDriver driver) {
 		super(driver);
 		this.driver = driver;
@@ -149,7 +149,7 @@ public class CreateAccount extends AbstractClass {
 	}
 	
 	
-	public void enterAddressInfo(String firstName, String lastName, 
+	public LogInPage  enterAddressInfo(String firstName, String lastName, 
 	String companyName, String addName1, String addName2, 
 	String data1, String stateName, String cityName,
 	String zipCode, String mobileNo) throws InterruptedException, IOException
@@ -169,6 +169,7 @@ public class CreateAccount extends AbstractClass {
 		address1Ele.sendKeys(addName1);
 		
 		//scrollToPage(1100);
+		
 		//Thread.sleep(2000);
 		address2Ele.clear();
 		address2Ele.sendKeys(addName2);
@@ -197,6 +198,9 @@ public class CreateAccount extends AbstractClass {
 		captureScreenshot(driver,"Congratulations");
 		String congratulations = congratulationsEle.getText();
 		System.out.println(congratulations);
+		
+		return new LogInPage(driver);
+		
 	}
 	
 }
