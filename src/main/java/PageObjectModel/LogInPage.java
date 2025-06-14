@@ -25,19 +25,24 @@ public class LogInPage extends AbstractClass{
 	WebElement passwordEle;
 	@FindBy(css = "button[data-qa='login-button']") 
 	WebElement logInEle;
+	@FindBy(css = "a[href='/login']")
+	WebElement logInSignInEle;
 	
 	
-	
-	
+	public void goToUrl() 
+	{
+		driver.get("https:automationexercise.com"); 
+		logInSignInEle.click();
+	}
 	
 	public void userLogIn(String emailId, String password)
 	{
 		waitTillElementAppear(emailIdAppear);
 		emailAddressEle.clear();
-		emailAddressEle.sendKeys();
+		emailAddressEle.sendKeys(emailId);
 		
 		passwordEle.clear();
-		passwordEle.sendKeys();
+		passwordEle.sendKeys(password);
 		
 		logInEle.click();
 	}

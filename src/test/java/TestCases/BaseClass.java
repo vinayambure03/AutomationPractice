@@ -34,7 +34,7 @@ public class BaseClass {
 	ExtentTest test;
 	ExtentReports extent;
 	ExtentReportClass  erc;
-	LogInPage logInPage;
+
 	public WebDriver initializerDriver() throws Exception
 	{
 		Properties prop = new Properties();
@@ -73,23 +73,24 @@ public class BaseClass {
 	
 	
 	
-	@BeforeTest
-	public CreateAccount signInApp() throws Exception
-	{
-		driver = initializerDriver();
-		createAcc =  new CreateAccount(driver);
-		createAcc.goToUrl();
-		return createAcc;
-	}
+//	@BeforeTest
+//	public CreateAccount signInApp() throws Exception
+//	{
+//		driver = initializerDriver();
+//		createAcc =  new CreateAccount(driver);
+//		createAcc.goToUrl();
+//		return createAcc;
+//	}
 	
 	
 	
 
 	public void tearDown() throws Exception
 	{
+		Thread.sleep(2000);
 		if (driver != null) {
 	        driver.close();
-	        Thread.sleep(2000);
+	        
 	    }
 //	    if (extent != null) {"V017@gmail.com"
 //	        extent.flush();

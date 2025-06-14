@@ -1,17 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-06-13T19:40:31Z" name="Default suite" finished-at="2025-06-13T19:41:42Z" duration-ms="71125">
+  <suite started-at="2025-06-14T19:51:26Z" name="Suite" finished-at="2025-06-14T19:53:28Z" duration-ms="121981">
     <groups>
     </groups>
-    <test started-at="2025-06-13T19:40:31Z" name="Default test" finished-at="2025-06-13T19:41:42Z" duration-ms="71125">
-      <class name="TestCases.Test_LogInPage">
-        <test-method is-config="true" signature="signInApp()[pri:0, instance:TestCases.Test_LogInPage@6f44a157]" started-at="2025-06-13T19:40:31Z" name="signInApp" finished-at="2025-06-13T19:40:56Z" duration-ms="24393" status="PASS">
+    <test started-at="2025-06-14T19:51:26Z" name="Test" finished-at="2025-06-14T19:53:28Z" duration-ms="121981">
+      <class name="TestCases.Test_CreateAccount">
+        <test-method signature="createMyAcc(java.util.HashMap)[pri:0, instance:TestCases.Test_CreateAccount@600b9d27]" started-at="2025-06-14T19:51:26Z" name="createMyAcc" data-provider="getData" finished-at="2025-06-14T19:52:08Z" duration-ms="41837" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{lastName=Kumari, zipCode=5660012, data=2021, companyName=I Am Company, data1=Israel, mobileNo=7894561230, userName=V019, signOptionText=Sign up for our newsletter!, firstName=Kumar, password=V@123, userEmailId=V019@gmail.com, month=6, cityName=Bangalore, stateName=Karnakata, addName2=vijayanagr, offerLetterText=Receive special offers from our partners!, addName1=H/N 189, Kumar nilay, day=11}]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- signInApp -->
-        <test-method signature="userLogInPage(java.util.HashMap)[pri:0, instance:TestCases.Test_LogInPage@6f44a157]" started-at="2025-06-13T19:40:56Z" name="userLogInPage" data-provider="getLogInData" finished-at="2025-06-13T19:41:42Z" duration-ms="46270" status="FAIL">
+        </test-method> <!-- createMyAcc -->
+      </class> <!-- TestCases.Test_CreateAccount -->
+      <class name="TestCases.Test_LogInPage">
+        <test-method signature="userLogInPage(java.util.HashMap)[pri:0, instance:TestCases.Test_LogInPage@3688eb5b]" started-at="2025-06-14T19:52:08Z" name="userLogInPage" data-provider="getLogInData" finished-at="2025-06-14T19:52:25Z" duration-ms="16886" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -19,45 +28,43 @@
               </value>
             </param>
           </params>
-          <exception class="java.lang.NullPointerException">
-            <message>
-              <![CDATA[Cannot invoke "PageObjectModel.LogInPage.userLogIn(String, String)" because "this.logInPage" is null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "PageObjectModel.LogInPage.userLogIn(String, String)" because "this.logInPage" is null
-at TestCases.Test_LogInPage.userLogInPage(Test_LogInPage.java:18)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- userLogInPage -->
+        <test-method signature="userLogInPage(java.util.HashMap)[pri:0, instance:TestCases.Test_LogInPage@3688eb5b]" started-at="2025-06-14T19:52:25Z" name="userLogInPage" data-provider="getLogInData" finished-at="2025-06-14T19:52:50Z" duration-ms="24381" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{password=V016@gmail.com, emailId=V016}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- userLogInPage -->
+        <test-method signature="userLogInPage(java.util.HashMap)[pri:0, instance:TestCases.Test_LogInPage@3688eb5b]" started-at="2025-06-14T19:52:50Z" name="userLogInPage" data-provider="getLogInData" finished-at="2025-06-14T19:53:08Z" duration-ms="18905" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{password=V015@gmail.com, emailId=V015}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- userLogInPage -->
+        <test-method signature="userLogInPage(java.util.HashMap)[pri:0, instance:TestCases.Test_LogInPage@3688eb5b]" started-at="2025-06-14T19:53:08Z" name="userLogInPage" data-provider="getLogInData" finished-at="2025-06-14T19:53:28Z" duration-ms="19502" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{password=V017@gmail.com, emailId=V017}]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- userLogInPage -->
       </class> <!-- TestCases.Test_LogInPage -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

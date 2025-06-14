@@ -31,7 +31,11 @@ public class Test_CreateAccount extends BaseClass{
 	public void createMyAcc(HashMap<String, String> input) throws Exception {
 	
 	SoftAssert ass = new SoftAssert(); 
-	signInApp();
+ //   signInApp(); 
+	
+	initializerDriver();
+	CreateAccount createAcc = new CreateAccount(driver);
+	createAcc.goToUrl();
 	createAcc.signInApp(input.get("userName"), input.get("userEmailId") );
 	createAcc.selectRadioBtn();
 	String name = createAcc.verifyName();

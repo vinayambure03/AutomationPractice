@@ -57,7 +57,7 @@ public class CreateAccount extends AbstractClass {
 	@FindBy(css = "#first_name")
 	WebElement firstNameEle;
 	@FindBy(css = "#last_name")
-	WebElement lastNameEle;
+	WebElement lastNameEle; 
 	@FindBy(css = "#company")
 	WebElement companyEle;
 	@FindBy(css = "#address1")
